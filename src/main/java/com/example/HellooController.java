@@ -19,7 +19,7 @@ public class HellooController {
     @RequestMapping("/")
     public String list(Model model){
         List<BoardVO> list = boardService.getBoardList();
-        model.addAttribute("list",list);
+        model.addAttribute("list",boardService.getBoardList());
 
         return "list";
     }
