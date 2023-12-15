@@ -31,23 +31,35 @@
 <table>
     <tr>
         <td>ID:</td>
-        <td>${u.seq}</td>
+        <td>${u.cnt}</td>
     </tr>
     <tr>
         <td>Title:</td>
         <td>${u.title}</td>
     </tr>
     <tr>
-        <td>Writer:</td>
-        <td>${u.writer}</td>
+        <td>Artist:</td>
+        <td>${u.artist}</td>
     </tr>
     <tr>
-        <td>Category:</td>
-        <td>${u.category}</td>
+        <td>Composer:</td>
+        <td>${u.composer}</td>
     </tr>
     <tr>
-        <td>Content:</td>
-        <td>${u.content}</td>
+        <td>Lyricist:</td>
+        <td>${u.lyric}</td>
+    </tr>
+    <tr>
+        <td>Genre:</td>
+        <td>${u.genre}</td>
+    </tr>
+    <tr>
+        <td>Released Date:</td>
+        <td>${u.releaseDate}</td>
+    </tr>
+    <tr>
+        <td>My Review:</td>
+        <td>${u.review}</td>
     </tr>
     <tr>
         <td>Regdate:</td>

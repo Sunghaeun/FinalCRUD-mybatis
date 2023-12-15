@@ -14,12 +14,12 @@ import java.util.List;
 public class HellooController {
 
     @Autowired
-    BoardService boardService;
+    BoardService BoardService;
 
     @RequestMapping("/")
     public String list(Model model){
-        List<BoardVO> list = boardService.getBoardList();
-        model.addAttribute("list",boardService.getBoardList());
+        List<BoardVO> list = BoardService.getSongList();
+        model.addAttribute("list",BoardService.getSongList());
 
         return "list";
     }
@@ -32,7 +32,7 @@ public class HellooController {
 
     @RequestMapping(value="/addok", method= RequestMethod.POST)
     public String addPostOK(BoardVO vo){
-        if(boardService.insertBoard(vo)==0)
+        if(BoardService.insertSong(vo)==0)
             System.out.println("데이터 추가 실패");
         else
             System.out.println("데이터 추가 성공!!!");
@@ -40,20 +40,20 @@ public class HellooController {
     }
     @RequestMapping(value="/editform/{id}", method= RequestMethod.GET)
     public String editPost(@PathVariable("id") int id, Model model){
-        BoardVO boardVO=boardService.getBoard(id);
+        BoardVO boardVO=BoardService.getSong(id);
         model.addAttribute("u",boardVO);
         return "editform";
     }
 
     @RequestMapping(value="/view/{id}", method= RequestMethod.GET)
     public String viewPost(@PathVariable("id") int id, Model model){
-        BoardVO boardVO=boardService.getBoard(id);
+        BoardVO boardVO=BoardService.getSong(id);
         model.addAttribute("u",boardVO);
         return "view";
     }
     @RequestMapping(value="/editok", method= RequestMethod.POST)
     public String editPostOk(BoardVO vo){
-        if(boardService.updateBoard(vo)==0)
+        if(BoardService.updateSong(vo)==0)
             System.out.println("데이터 수정 실패");
         else
             System.out.println("데이터 수정 성공!!!");
@@ -61,7 +61,7 @@ public class HellooController {
     }
     @RequestMapping(value="/deleteok/{id}", method= RequestMethod.GET)
     public String deletePostOk(@PathVariable("id") int id){
-        if(boardService.deleteBoard(id)==0)
+        if(BoardService.deleteSong(id)==0)
             System.out.println("데이터 삭제 실패");
         else
             System.out.println("데이터 삭제 성공!!!");

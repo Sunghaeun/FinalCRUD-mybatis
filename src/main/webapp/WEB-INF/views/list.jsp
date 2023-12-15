@@ -37,36 +37,6 @@
 
 </head>
 <body>
-<main><h1>자유게시판</h1>
-  <table id="list" width="90%">
-    <tr>
-      <th>Id</th>
-      <th>Category</th>
-      <th>Title</th>
-      <th>Writer</th>
-      <th>Content</th>
-      <th>Regdate</th>
-      <th>View</th>
-      <th>Edit</th>
-      <th>Delete</th>
-    </tr>
-    <tr>
-      <c:forEach items="${list}" var="u">
-    <tr>
-      <td>${u.seq}</td>
-      <td>${u.category}</td>
-      <td>${u.title}</td>
-      <td>${u.writer}</td>
-      <td>${u.content}</td>
-      <td>${u.regdate}</td>
-      <td><a href="<c:url value='/view/${u.seq}'/>">View</a></td>
-      <td><a href="editform/${u.seq}">Edit</a></td>
-      <td><a href="<c:url value='/deleteok/${u.seq}'/>">Delete</a></td>
-
-    </tr>
-    </c:forEach>
-    </tr>
-
   </table>
 
   <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
@@ -85,14 +55,18 @@
         <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
           <div class="col p-4 d-flex flex-column position-static">
 
-            <strong class="d-inline-block mb-2 text-primary">${u.seq}</strong>
-            <h3 class="mb-0">${u.category}</h3>
-            <div class="mb-1 text-muted">${u.title}</div>
-            <p class="card-text mb-auto">${u.writer}</p>
+            <strong class="d-inline-block mb-2 text-primary">${u.cnt}</strong>
+            <h3 class="mb-0">${u.title}</h3>
+            <div class="mb-1 text-muted">${u.artist}</div>
+            <p class="card-text mb-auto">${u.composer}</p>
+            <p class="card-text mb-auto">${u.lyric}</p>
+            <p class="card-text mb-auto">${u.genre}</p>
+            <p class="card-text mb-auto">${u.releaseDate}</p>
+            <p class="card-text mb-auto">${u.review}</p>
             <div>
-              <a href="<c:url value='/view/${u.seq}'/>">View</a>
-              <a href="editform/${u.seq}">Edit</a>
-              <a href="<c:url value='/deleteok/${u.seq}'/>">Delete</a>
+              <a href="<c:url value='/view/${u.cnt}'/>">View</a>
+              <a href="editform/${u.cnt}">Edit</a>
+              <a href="<c:url value='/deleteok/${u.cnt}'/>">Delete</a>
             </div>
 
 

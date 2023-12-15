@@ -2,22 +2,22 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="Board">
-    <insert id="insertBoard">
-        insert into BOARD (category,title, writer,content)
-        values (#{category}, #{title}, #{writer}, #{content})
+<mapper namespace="Song">
+    <insert id="insertSong">
+        insert into Song (title, artist, composer, lyric, genre, releaseDate, review)
+        values (#{title}, #{artist}, #{composer}, #{lyric}, #{genre}, #{releaseDate}, #{review})
     </insert>
-    <update id="updateBoard">
-        update BOARD
-        set title= #{title}, content=#{content}, writer=#{writer}, category = #{category} where seq=#{seq}
+    <update id="updateSong">
+        update Song
+        set title= #{title}, artist=#{artist}, composer=#{composer}, lyric = #{lyric}, genre= #{genre}, releaseDate = #{releaseDate}, review = #{review} where cnt=#{cnt}
     </update>
-    <delete id="deleteBoard">
-        delete from BOARD where seq=#{seq}
+    <delete id="deleteSong">
+        delete from Song where cnt=#{cnt}
     </delete>
-    <select id="getBoard" resultType="board">
-        select * from BOARD where seq = #{seq}
+    <select id="getSong" resultType="Song">
+        select * from Song where cnt = #{cnt}
     </select>
-    <select id="getBoardList" resultType="board">
-        select * from BOARD order by seq desc
+    <select id="getSongList" resultType="Song">
+        select * from Song order by cnt desc
     </select>
 </mapper>

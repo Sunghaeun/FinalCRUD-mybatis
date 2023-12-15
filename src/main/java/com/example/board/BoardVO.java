@@ -2,71 +2,86 @@ package com.example.board;
 import java.util.Date;
 
 public class BoardVO {
-        private int seq;
-        private String title;
-        private String writer;
-        private String content;
-        private String category;
-        private Date regdate;
-        private Date editdate;
-        private int cnt;
-
-        public int getSeq() {
-            return seq;
-        }
-        public void setSeq(int seq) {
-            this.seq = seq;
-        }
-        public String getTitle() {
-            return title;
-        }
-        public void setTitle(String title) {
-            this.title = title;
-        }
-        public String getWriter() {
-            return writer;
-        }
-        public void setWriter(String writer) {
-            this.writer = writer;
-        }
-        public String getCategory() {
-            return category;
-        }
-        public void setCategory(String category) {
-            this.category = category;
-        }
-        public String getContent() {
-            return content;
-        }
-        public void setContent(String content) {
-            this.content = content;
-        }
-        public Date getRegdate() {
-            return regdate;
-        }
-        public void setRegdate(Date regdate) {
-            this.regdate = regdate;
-        }
-        public Date getEditdate() {
-            return editdate;
-        }
-        public void setEditdate(Date editdate) {
-            this.editdate = editdate;
-        }
-        public int getCnt() {
-            return cnt;
-        }
-        public void setCnt(int cnt) {
-            this.cnt = cnt;
-        }
-        private Long id;
-
-        // Getter and Setter for 'id'
-        public Long getId() {
-            return id;
-        }
-
-        public void setId(Long id) {
-            this.id = id;
-        }
+    public int getCnt() {
+        return cnt;
     }
+
+    public void setCnt(int cnt) {
+        this.cnt = cnt;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getArtist() {
+        return artist;
+    }
+
+    public void setArtist(String artist) {
+        this.artist = artist;
+    }
+
+    public String getComposer() {
+        return composer;
+    }
+
+    public void setComposer(String composer) {
+        this.composer = composer;
+    }
+
+    public String getLyric() {
+        return lyric;
+    }
+
+    public void setLyric(String lyric) {
+        this.lyric = lyric;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
+    public String getReleaseDate() {
+        return releaseDate;
+    }
+
+    public void setReleaseDate(String releaseDate) {
+        this.releaseDate = releaseDate;
+    }
+
+    public String getReview() {
+        return review;
+    }
+
+    public void setReview(String review) {
+        this.review = review;
+    }
+
+    public Date getRegdate() {
+        return regdate;
+    }
+
+    public void setRegdate(Date regdate) {
+        this.regdate = regdate;
+    }
+
+    private int cnt;
+        private String title;
+        private String artist;
+        private String composer;
+        private String lyric;
+        private String genre;
+        private String releaseDate;
+        private String review;
+        private Date regdate;
+
+}

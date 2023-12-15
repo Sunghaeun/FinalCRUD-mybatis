@@ -10,23 +10,23 @@ public class BoardServiceImpl implements BoardService {
     @Autowired
     BoardDAO boardDAO;
     @Override
-    public int insertBoard(BoardVO vo) {
-        return boardDAO.insertBoard(vo);
+    public int insertSong(BoardVO vo) {
+        return boardDAO.insertSong(vo);
     }
     @Override
-    public int deleteBoard(int seq) {
-        return boardDAO.deleteBoard(seq);
+    public int deleteSong(int cnt) {
+        return boardDAO.deleteSong(cnt);
     }
     @Override
-    public int updateBoard(BoardVO vo) {
-        return boardDAO.updateBoard(vo);
+    public int updateSong(BoardVO vo) {
+        return boardDAO.updateSong(vo);
     }
     @Override
-    public BoardVO getBoard(int seq) {
-        return boardDAO.getBoard(seq);
+    public BoardVO getSong(int cnt) {
+        return boardDAO.getSong(cnt);
     }
     @Override
-    public List <BoardVO> getBoardList() {
-        return boardDAO.getBoardList();
+    public List <BoardVO> getSongList() {
+        return boardDAO.getSongList();
     }
 }
